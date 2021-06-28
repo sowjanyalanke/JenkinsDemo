@@ -26,8 +26,8 @@ public class BaseClass {
 // 		}
 // 		driver.manage().window().maximize();
 // 		driver.get(System.getProperty("url"));
-		WebDriverManager.chromedriver().setup();
-		driver=new ChromeDriver();
+		WebDriverManager.firefoxdriver().setup();
+		driver=new FirefoxDriver();
 			driver.get("https://www.google.com/");
 			driver.manage().window().maximize();
 	}	
