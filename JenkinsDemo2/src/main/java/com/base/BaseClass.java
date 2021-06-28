@@ -14,18 +14,20 @@ public class BaseClass {
 	
 	@BeforeMethod
 	public void setup() {
-		if (System.getProperty("browser").equalsIgnoreCase("Chrome")) {
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
-		} else if (System.getProperty("browser").equalsIgnoreCase("Firefox")) {
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
-		} else if (System.getProperty("browser").equalsIgnoreCase("IE")) {
-			WebDriverManager.iedriver().setup();
-			driver = new InternetExplorerDriver();
-		}
-		driver.manage().window().maximize();
-		driver.get(System.getProperty("url"));
+// 		if (System.getProperty("browser").equalsIgnoreCase("Chrome")) {
+// 			WebDriverManager.chromedriver().setup();
+// 			driver = new ChromeDriver();
+// 		} else if (System.getProperty("browser").equalsIgnoreCase("Firefox")) {
+// 			WebDriverManager.firefoxdriver().setup();
+// 			driver = new FirefoxDriver();
+// 		} else if (System.getProperty("browser").equalsIgnoreCase("IE")) {
+// 			WebDriverManager.iedriver().setup();
+// 			driver = new InternetExplorerDriver();
+// 		}
+// 		driver.manage().window().maximize();
+// 		driver.get(System.getProperty("url"));
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
 			driver.get("https://www.google.com/");
 			driver.manage().window().maximize();
 	}	
